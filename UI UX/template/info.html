@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CrowdManagement 
+        </title>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static\css\style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    </head>
+    <body>  
+    <section class="sub-sub-header">
+       <nav>
+            <a href="index.html"><img src=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>  
+                        <a href="/">HOME</a>
+                        <a href="info">INFO</a>
+                        <a href="http://localhost:3008/">INJURY</a>
+                        <a href="http://localhost:3000/">STATS</a>
+                        <a href="about">ABOUT</a>
+
+                    </ul>     
+            </div> 
+            <i class="fa fa-bars" onclick="ShowMenu()"></i>
+       </nav>
+       <h1>INFORMATION OF FEW DISASTERS</h1>
+    </div>
+    </section>
+    <!----------INFO--------------------------->
+
+    <section class="info">
+        <P>
+            Disasters are serious disruptions to the 
+            functioning of a community that exceed its 
+            capacity to cope using its own resources.
+            Disasters can be caused by natural, 
+            man-made and technological hazards, 
+            as well as various factors that influence the exposure 
+            and vulnerability of a community.  
+        </P>
+
+        <div class="row">
+            <div class = "info-col">
+                <img src="static\images\landslide.jpg" >
+                <h2>LANDSLIDES</h2>
+                <P>A landslide or landslip is the mass movement of rock, debris, 
+                    earth or mud down a slope. While most landslides are caused by 
+                    gravity, they can also be caused by rainfall, earthquakes, 
+                    volcanic eruptions, groundwater pressure, erosion, 
+                    destabilization of slopes as a result of deforestation, 
+                    cultivation and construction, and snow or glacial melt. 
+                    Debris flows, or mudflows, are fast-moving landslides that
+                    are especially dangerous due to their speed and volume. 
+                    Some debris flows have been recorded as reaching speeds 
+                    of over 160 kilometres per hour.
+                </P>
+            </div>
+            <div class = "info-col">
+                <img src="static\images\earthquake1.jpg" >
+                <h2>EARTHQUAKE</h2>
+                <P>An earthquake is a sudden and rapid shaking of 
+                    the ground caused by the shifting of rocks beneath
+                     the earth’s surface, or by volcanic or 
+                     magmatic activity in the earth. 
+                     Earthquakes strike suddenly, without warning, and 
+                     can occur at any time. They can lead to death, 
+                     injuries, property damage, loss of shelter and 
+                     livelihoods and disruption of critical infrastructure.
+                     Most deaths are due to buildings collapsing or
+                     to secondary hazards, such as fires, tsunamis, 
+                     flooding, landslides and release of chemicals
+                     or toxic materials. 
+                </P>
+            </div>
+            <div class = "info-col">
+                <img src="static\images\flood.jpg" >
+                <h2>FLOOD</h2>
+                <P>Floods are when water overflows from the normal boundaries of a stream,
+                    river or other body of water, or accumulates in an area that is
+                    usually dry. There are two main types of floods. Inundation 
+                    floods are slow and develop over hours or days. Flash floods 
+                    occur suddenly, often without warning and usually due to heavy rain.
+                    Though annual flooding is a natural phenomenon in many parts of
+                    the world, human habitation and land-use practices have led to 
+                    an increase in frequency and size of floods. . Floods can be extremely dangerous 
+                    and cause massive human, environmental and material damage 
+                    to communities.
+                </P>
+            </div>
+        </div>
+        <div class="info-dis">
+            <h1>World Disaster Report 2022</h1>
+            <img src="static\images\covid.jpg" >
+            <div class="text"> 
+            <h3>
+                World Disaster Report- Covid 2022
+            </h3>
+            <p>
+                The COVID-19 pandemic has been the biggest disaster in living memory, on almost any measure. More than 6.5 million people are confirmed to have died in less than three years, and the pandemic’s indirect impacts have touched the lives o<span id="dots">...</span><span id="more">f virtually every community on the planet.
+                    Our World Disasters Report 2022 focuses on the coronavirus pandemic and preparedness: both the ways preparedness ahead of COVID-19 was inadequate, and how the world can prepare more effectively for future public health emergencies. 
+                    For the IFRC, preparedness encompasses preventing, responding to, and recovering from an emergency. Being truly prepared therefore means being ready to respond, to recover, and to learn lessons for next time. In other words, preparedness is an ongoing, continuous process. 
+                    We can save lives simply by being prepared. The next pandemic could be just around the corner: if the experience of COVID-19 won’t quicken our steps toward preparedness, what will?</span>
+            </p>
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+        
+        <!---------------JavaScrip for readmore button------------->  
+        <script>
+            function myFunction() {
+              var dots = document.getElementById("dots");
+              var moreText = document.getElementById("more");
+              var btnText = document.getElementById("myBtn");
+            
+              if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+              } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+              }
+            }
+            </script>
+          </div>     
+        </div>
+    </section>
+
+    
+<!----------------------FOOTER----------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>We are dedicated to revolutionizing crowd management in disaster
+        areas using cutting-edge technology. <br> Together, we are committed to enhancing public safety and response
+        effectiveness during times of crisis</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+
+    </div>
+</section>
+
+    </body>
+</html>

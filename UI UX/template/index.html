@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CrowdManagement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <style>
+        /* Ensure navLinks are visible and clickable */
+        .nav-links {
+            position: relative;
+            z-index: 1;
+        }
+        .header {
+            position: relative;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>  
+<section class="header">
+    <nav>
+        <!-- <a href="/"><img src="" alt="Logo"></a> -->
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>  
+                <li><a href="/">HOME</a></li>
+                <li><a href="info">INFO</a></li>
+                <li><a href="http://localhost:3008/">INJURY</a></li>
+                <li><a href="http://localhost:3000/">STATS</a></li>
+                <li><a href="about">ABOUT</a></li>
+            </ul>
+        </div> 
+        <i class="fa fa-bars" onclick="ShowMenu()"></i>
+    </nav>
+    <div class="txt">
+        <h1>CROWD MANAGEMENT IN <br> DISASTER AREAS</h1>
+        <p>Empowering communities through innovative technology for safer disaster response</p>
+        <a href="info" class="herobtn">KNOW MORE</a>
+    </div>
+</section>
+
+<section class="info">
+    <h1>DIFFERENT HAZARDS</h1>
+    <p>
+        Disasters are serious disruptions to the functioning of a community that exceed its capacity to cope using its own resources. <br>
+        Disasters can be caused by natural, man-made and technological hazards, as well as various factors that influence the exposure and vulnerability of a community.
+    </p>
+    <div class="row">
+        <section>
+            <div class="info-col">
+                <h2>Earthquakes</h2>
+                <p>A sudden and violent shaking of the ground, caused by the movement of tectonic plates beneath the Earth's surface, often resulting in widespread destruction and loss of life.</p>
+            </div>
+            <div class="info-col">
+                <h2>Volcanic eruption</h2>
+                <p>The release of magma, gases, and ash from a volcano, leading to the expulsion of molten rock onto the Earth's surface, accompanied by volcanic tremors and potential hazards such as pyroclastic flows and lahars.</p>
+            </div>
+            <div class="info-col">
+                <h2>Landslides</h2>
+                <p>The rapid movement of a large mass of earth or rock down a slope, triggered by factors such as heavy rainfall, seismic activity, or human activities, often resulting in property damage, loss of life, and disruption of infrastructure.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="info-col">
+                <h2>Tsunami</h2>
+                <p>A series of large ocean waves caused by the sudden displacement of water, typically triggered by underwater earthquakes, volcanic eruptions, or landslides, with devastating impacts on coastal areas.</p>
+            </div>
+            <div class="info-col">
+                <h2>Avalanches</h2>
+                <p>Rapid and downhill movement of snow, ice, and debris, often triggered by factors such as steep slopes, unstable snowpack, posing significant hazards to mountainous regions.</p>
+            </div>
+            <div class="info-col">
+                <h2>Floods</h2>
+                <p>Overflow of water onto land that is usually dry, caused by factors such as heavy rainfall, snowmelt, storm surges, or dam failures, leading to inundation of homes, destruction of crops, and displacement of communities.</p>
+            </div>
+        </section>
+    </div>
+    <div class="info-dis">
+        <h1>World Disaster Report 2022</h1>
+        <img src="{{ url_for('static', filename='images/covid.jpg') }}" alt="Covid-19">
+        <div class="text"> 
+            <h3>World Disaster Report- Covid 2022</h3>
+            <p>
+                The COVID-19 pandemic has been the biggest disaster in living memory, on almost any measure. More than 6.5 million people are confirmed to have died in less than three years, and the pandemic’s indirect impacts have touched the lives o<span id="dots">...</span><span id="more">f virtually every community on the planet.
+                Our World Disasters Report 2022 focuses on the coronavirus pandemic and preparedness: both the ways preparedness ahead of COVID-19 was inadequate, and how the world can prepare more effectively for future public health emergencies. 
+                For the IFRC, preparedness encompasses preventing, responding to, and recovering from an emergency. Being truly prepared therefore means being ready to respond, to recover, and to learn lessons for next time. In other words, preparedness is an ongoing, continuous process. 
+                We can save lives simply by being prepared. The next pandemic could be just around the corner: if the experience of COVID-19 won’t quicken our steps toward preparedness, what will?</span>
+            </p>
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+
+            <!---------------JavaScript for read more button------------->
+            <script>
+                function myFunction() {
+                    var dots = document.getElementById("dots");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("myBtn");
+
+                    if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "Read more"; 
+                        moreText.style.display = "none";
+                    } else {
+                        dots.style.display = "none";
+                        btnText.innerHTML = "Read less"; 
+                        moreText.style.display = "inline";
+                    }
+                }
+            </script>
+        </div>     
+    </div>
+</section>
+
+<!---------JavaScript for Toggle Menu------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function ShowMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<!-----------Call To Action--------------->
+<section class="cta">
+    <h1>KNOW MORE</h1>
+    <a href="contact" class="herobtn">CONTACT US</a>
+</section>
+
+<!----------------------FOOTER----------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>We are dedicated to revolutionizing crowd management in disaster areas using cutting-edge technology. <br> Together, we are committed to enhancing public safety and response effectiveness during times of crisis</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+</section>
+</body>
+</html>

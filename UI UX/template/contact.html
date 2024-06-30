@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Us</title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/news2.png"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact_style.css') }}">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "ZEHWt7uc5LeXqHgaD",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_np0avbi', 'template_vuqdh9n', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+
+
+    
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="contactInfo"> 
+                    <div>
+                        <h2>Contact Info</h2>
+                        <ul class="info">
+                            <li>
+                                <span><img src="/static/images/location.png"></span>
+                                <span>Bengaluru<br>
+                                   Karnataka<br>
+                                    India</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span><img src="/static/images/mail.png"></span>
+                                
+                                <span><a href = "mailto: crowdmanagement2024@gmail.com">crowdmanagement2024@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <span><img src="/static/images/call.png"></span>
+                                <span>112</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/bhavika.paladugu.9?mibextid=JRoKGi"><img src="/static/images/1.png"></a></li>
+                        <li><a href="https://www.instagram.com/paladugubhavika?igsh=MTFpdWxtb2I2b25lYQ=="><img src="/static/images/3.png"></a></li>
+                        <li><a href="https://x.com/PDhanyashr53427?t=JwG4OTZeLLQYTMuY8gSzww&s=08"><img src="/static/images/2.png"></a></li> 
+                         <li><a href="https://www.linkedin.com/in/meghana-sr-48637521a/"><img src="/static/images/5.png"></a></li>
+                        
+                    </ul>
+                </div>
+                    <div class="contactForm">
+                        <form ref={form} id="contact-form" onSubmit={sendEmail}>
+                        <h2>Send a Message</h2>
+                        <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="from_name" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            
+                            <textarea id = "message" name="message" required></textarea> 
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div></div>
+                        </form>
+                    </div>
+                </div>
+                    
+                    
+             
+        </section>
+    </body>
+</html> 
+
+
+
+
+
+
+

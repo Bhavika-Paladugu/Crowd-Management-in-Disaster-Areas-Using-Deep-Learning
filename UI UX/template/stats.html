@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CrowdManagement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>  
+    
+    <section class="stats-header">
+       <nav>
+            <a href="index.html"><img src=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>  
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="info">INFO</a></li>
+                    <li><a href="stats">STATS</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                </ul>     
+            </div> 
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+       </nav>
+       <h1>RESPONSE AND RESULTS</h1>
+       
+    </section>
+    
+    <!--------------STATS------------------>
+    <section class="stats">
+        <h1>OBJECTIVES</h1>
+        <p>
+            <b>Original Image:</b><br>
+            <img src="{{ original_image_path }}" alt="Original Image"><br>
+            <b>Detection of person:</b><br>
+            <img src="{{ processed_image_path }}" alt="Processed Image"><br>
+            Count: {{ count }}<br> 
+            classification <br>  
+            <b>Resource Allocation:</b><br>
+            <div id="resource-allocation">
+                <!-- Resource allocation data will be displayed here dynamically -->
+            </div>
+            heatmap
+        </p>
+    </section>
+
+    <!----------------------FOOTER----------->
+    <section class="footer">
+        <h4>About Us</h4>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+    <script src="static/js/script.js"></script>
+    
+</body>
+</html>

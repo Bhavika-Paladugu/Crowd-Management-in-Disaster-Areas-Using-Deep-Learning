@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
+    <title>CrowdManagement</title>
+</head>
+<body>
+
+    <section class="stats-header">
+        <nav>
+             <a href="index.html"><img src=""></a>
+             <div class="nav-links" id="navLinks">
+                 <i class="fa fa-times" onclick="hideMenu()"></i>
+                 <ul>  
+                     <li><a href="/">HOME</a></li>
+                     <li><a href="info">INFO</a></li>
+                     <li><a href="stats">STATS</a></li>
+                     <li><a href="about">ABOUT</a></li>
+                 </ul>     
+             </div> 
+             <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>RESPONSE AND RESULTS</h1>
+        
+     </section>
+    <form action = "http://localhost:3000/imageapi" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+    </form>
+
+    <img id="uploadedImage" src="" alt="Uploaded Image">
+    
+    <script src="./js/index.js"></script>
+
+      <section class="stats">
+        <h1>OBJECTIVES</h1>
+        <p>
+            <b>Original Image:</b><br>
+            <img src="" alt="Original Image"><br>
+            <b>Detection of person:</b><br>
+            <img src="{{ url_for('process_image') }}" alt="Processed Image"><br>
+            Count: {{ count }}<br> 
+            classification <br>  
+            <b>Resource Allocation:</b><br>
+            <div id="resource-allocation">
+                <!-- Resource allocation data will be displayed here dynamically -->
+            </div>
+            heatmap
+        </p>
+    </section>
+
+    <!----------------------FOOTER----------->
+    <section class="footer">
+        <h4>About Us</h4>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+    <script src="static/js/script.js"></script>
+    
+</body>
+</html>
